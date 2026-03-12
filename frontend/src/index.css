@@ -1,0 +1,107 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   NeuroCity — Global CSS Variables & Base Styles
+   Clay Morphism Design System — Light / Dark
+   ═══════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --font-main: 'Outfit', 'Helvetica Neue', Arial, sans-serif;
+
+  /* ── Light Theme ──────────────────────── */
+  --bg-primary: #f0f0f5;
+  --bg-secondary: #e8e8ef;
+  --bg-card: #e6e6ed;
+  --bg-card-hover: #dddde5;
+  --bg-header: rgba(230, 230, 237, 0.88);
+  --bg-modal-overlay: rgba(0, 0, 0, 0.32);
+  --bg-input: #dcdce4;
+
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a6a;
+  --text-muted: #7a7a9a;
+  --text-accent: #6c5ce7;
+
+  --border-color: rgba(255, 255, 255, 0.6);
+  --border-inner: rgba(0, 0, 0, 0.06);
+
+  --shadow-clay-out: 6px 6px 14px rgba(0, 0, 0, 0.11), -6px -6px 14px rgba(255, 255, 255, 0.85);
+  --shadow-clay-out-sm: 3px 3px 8px rgba(0, 0, 0, 0.09), -3px -3px 8px rgba(255, 255, 255, 0.75);
+  --shadow-clay-in: inset 3px 3px 8px rgba(0, 0, 0, 0.07), inset -3px -3px 8px rgba(255, 255, 255, 0.6);
+  --shadow-clay-btn: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.8);
+  --shadow-clay-btn-active: inset 2px 2px 6px rgba(0, 0, 0, 0.1), inset -2px -2px 6px rgba(255, 255, 255, 0.5);
+
+  --accent-gradient: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  --accent-gradient-hover: linear-gradient(135deg, #5b4bd5, #8b83f7);
+  --accent-color: #6c5ce7;
+  --accent-light: #a29bfe;
+
+  --danger-color: #ef4444;
+  --warning-color: #f59e0b;
+  --success-color: #22c55e;
+  --info-color: #3b82f6;
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-full: 50px;
+
+  --transition-fast: 0.2s ease;
+  --transition-med: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* ── Dark Theme — True black / dark grey ── */
+[data-theme="dark"] {
+  --bg-primary: #0e0e0e;
+  --bg-secondary: #161616;
+  --bg-card: #1a1a1a;
+  --bg-card-hover: #222222;
+  --bg-header: rgba(14, 14, 14, 0.92);
+  --bg-modal-overlay: rgba(0, 0, 0, 0.6);
+  --bg-input: #1e1e1e;
+
+  --text-primary: #e5e5e5;
+  --text-secondary: #a0a0a0;
+  --text-muted: #666666;
+  --text-accent: #a29bfe;
+
+  --border-color: rgba(255, 255, 255, 0.06);
+  --border-inner: rgba(255, 255, 255, 0.04);
+
+  --shadow-clay-out: 6px 6px 16px rgba(0, 0, 0, 0.6), -6px -6px 16px rgba(40, 40, 40, 0.08);
+  --shadow-clay-out-sm: 3px 3px 10px rgba(0, 0, 0, 0.5), -3px -3px 10px rgba(40, 40, 40, 0.06);
+  --shadow-clay-in: inset 3px 3px 8px rgba(0, 0, 0, 0.4), inset -3px -3px 8px rgba(40, 40, 40, 0.06);
+  --shadow-clay-btn: 4px 4px 12px rgba(0, 0, 0, 0.5), -4px -4px 12px rgba(40, 40, 40, 0.06);
+  --shadow-clay-btn-active: inset 2px 2px 6px rgba(0, 0, 0, 0.4), inset -2px -2px 6px rgba(40, 40, 40, 0.04);
+}
+
+/* ── Base ──────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background var(--transition-med), color var(--transition-med);
+  overflow-x: hidden;
+}
+
+code {
+  font-family: 'JetBrains Mono', Menlo, Monaco, Consolas, monospace;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+
+::selection {
+  background: var(--accent-color);
+  color: white;
+}
