@@ -5,7 +5,7 @@ import {
   fetchForecast, fetchWeather, fetchAlerts,
   loginUser, signupUser, sendChatMessage,
   mapForecastToZones, mapAlertsToLocalAlerts,
-  mapIncidentsToTimeline, mapRemediesToCityNews,
+  mapRemediesToCityNews,
   buildWeatherSlogan, buildLiveChatResponse,
   PUNE_LAT, PUNE_LON,
 } from "./api";
@@ -315,9 +315,6 @@ export default function NeuroCityApp() {
 
       const alerts = mapAlertsToLocalAlerts(alertsData);
       if (alerts) setLiveAlerts(alerts);
-
-      const timeline = mapIncidentsToTimeline(forecast);
-      if (timeline) setLiveTimeline(timeline);
 
       const cityNews = mapRemediesToCityNews(forecast);
       if (cityNews) setLiveCityNews(cityNews);
