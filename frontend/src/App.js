@@ -120,14 +120,6 @@ const ZONES = [
   { id: 6, name: "Aundh", risk: "safe", flood: 12, traffic: 19, color: "#22c55e", problems: [] },
 ];
 
-const TIMELINE = [
-  { time: "12:02 PM", event: "Heavy rain detected — 84mm/hr", type: "info" },
-  { time: "12:10 PM", event: "Drainage load +67% in Shivajinagar", type: "warning" },
-  { time: "12:25 PM", event: "Flood risk alert — Level 2", type: "critical" },
-  { time: "12:40 PM", event: "Traffic congestion predicted (NH-48)", type: "warning" },
-  { time: "12:51 PM", event: "Emergency services on standby", type: "info" },
-  { time: "01:03 PM", event: "Ambulance re-route protocol active", type: "critical" },
-];
 
 const LOCAL_ALERTS = [
   { iconKey: "droplets", title: "Water cut in your area", desc: "Supply disrupted in Kothrud sector since 2 PM", time: "25 min ago" },
@@ -285,7 +277,6 @@ export default function NeuroCityApp() {
   const [forecastData, setForecastData] = useState(null);
   const [liveZones, setLiveZones] = useState(ZONES);
   const [liveAlerts, setLiveAlerts] = useState(null);
-  const [liveTimeline, setLiveTimeline] = useState(null);
   const [liveCityNews, setLiveCityNews] = useState(null);
   const [liveWeatherSlogan, setLiveWeatherSlogan] = useState(null);
   const [backendOnline, setBackendOnline] = useState(null); // null=unknown, true, false

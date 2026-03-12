@@ -107,7 +107,6 @@ export function mapForecastToZones(forecast, staticZones) {
   const maxFlood = Math.max(...hrs.map(h => h.risk_scores?.flood ?? 0), 0);
   const maxCongestion = Math.max(...hrs.map(h => h.risk_scores?.congestion ?? 0), 0);
   const maxPower = Math.max(...hrs.map(h => h.risk_scores?.power_outage ?? 0), 0);
-  const maxOverall = Math.max(...hrs.map(h => h.risk_scores?.overall ?? 0), 0);
   const incidents = forecast.active_incidents || [];
 
   /** Build a risk level string from a 0-1 score. */

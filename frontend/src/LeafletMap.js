@@ -14,9 +14,8 @@ const ZONE_COORDS = {
 
 const PUNE_CENTER = [18.5362, 73.8478];
 
-// Severity-based colors
 const severityColor = (s) => s >= 70 ? "#D93025" : s >= 40 ? "#E37400" : "#F9AB00";
-const severityBg = (s) => s >= 70 ? "#FCE8E6" : s >= 40 ? "#FEF7E0" : "#FFF8E1";
+
 
 /* Pulsing ring for critical zones */
 function PulseRing({ center, color }) {
